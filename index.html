@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con botón y colores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 2em;
+            animation: colorChange 3s infinite;
+        }
+
+        /* Definición de la animación para el cambio de color */
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: orange;
+            }
+            50% {
+                color: yellow;
+            }
+            75% {
+                color: green;
+            }
+            100% {
+                color: blue;
+            }
+        }
+
+        #image-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CHIVATO DETECTADO</h1>
+
+    <button onclick="mostrarImagen()">Ver imagen</button>
+
+    <div id="image-container">
+        <img src="https://cdn.discordapp.com/attachments/1279557097415114784/1310027065486999562/image.png?ex=6743b947&is=674267c7&hm=4d0c8fa481615a52bd0a34ef2be244ca9aad56920589420f05532a1cab2bf7a5&" alt="Imagen de ejemplo">
+    </div>
+
+    <script>
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('image-container');
+            imageContainer.style.display = 'block'; // Muestra la imagen
+        }
+    </script>
+
+</body>
+</html>
